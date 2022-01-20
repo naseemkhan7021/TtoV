@@ -56,6 +56,7 @@ $text = "";
 		if (isset($_SESSION["login"]) && $_SESSION["login"] == 1) {
 		?>
 			<input type="submit" class="submitbutton" value="Save To My List" style="padding:0px" />
+
 		<?php
 		} else {
 		?>
