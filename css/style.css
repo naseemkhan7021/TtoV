@@ -37,7 +37,7 @@ a:hover { text-decoration:underline;}
 
 .header img.twitter { float:right; margin:2px; padding:0;}
 /* logo */
-.logo { padding:0; margin:0; width:309px; float:left;}
+.logo { padding:0; margin:0; max-width:30px; float:left;}
 /* simple_text */
 .simple_text { text-align:right; font: normal 14px Arial, Helvetica, sans-serif; color:#737a7f; width:550px; float:right; padding:2px; margin:0;}
 .simple_text a { font: normal 11px Arial, Helvetica, sans-serif; color:#fff; text-decoration:none;}
@@ -75,7 +75,7 @@ a:hover { text-decoration:underline;}
 .header_text2 p span { font: bold 18px Arial, Helvetica, sans-serif; color:#fff;}
 /********** body **********/
 .body_resize { margin:0; padding:0;}
-.body { width:1000px;  margin:0 auto; padding:0; margin-top:0px}
+.body { width:100rem;  margin:0 auto; padding:0; margin-top:0px}
 .body h2 { border:0; font: normal 24px Arial, Helvetica, sans-serif; color:#0b4f7d; margin:0 0 10px 0; padding:10px 5px; border-bottom:1px solid #d3d6d8;}
 .body img { float:left; padding:0; margin:10px;}
 .body img.floated { float:right; padding:0; margin:10px;}
@@ -83,7 +83,7 @@ a:hover { text-decoration:underline;}
 .body p span { font: bold 11px Arial, Helvetica, sans-serif; color:#3f3f3f;}
 .body em { font: italic 11px Arial, Helvetica, sans-serif; color:#525252;}
 .body a { text-decoration:none; color:#A55FC1; line-height:1.8em;}
-.body a{font-size:26px;}
+.body a{font-size:16px;}
 .body_small { width:300px; float:left; margin:0; padding:10px;font-size:14px;overflow:scroll;}
 .body_small p.test { height:143px; background:url(../images/test.gif) top no-repeat; width:239px; padding:0px 15px; margin:0px 0;}
 .body_small p.borded { border:1px solid #c3c7ca;}
@@ -183,8 +183,30 @@ textarea { padding:10px; font: normal 14px Arial, Helvetica, sans-serif;}
     border-radius: 6px;
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
   }
+
+  .submitbutton-out {
+    width:200px;
+    height:40px;
+    border: 2px solid #a55fc1;
+    /* color: white; */
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    border-radius: 6px;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+  }
   
   .submitbutton:hover {
+    box-shadow: 0 0px 0px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+  .submitbutton-out:hover {
+    background-color: #a55fc12f;
     box-shadow: 0 0px 0px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
   }
 

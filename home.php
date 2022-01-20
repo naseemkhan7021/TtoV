@@ -1,6 +1,6 @@
 <?php 
-include "db.php";
-include "header.php";
+include "include/db/db.php";
+include "include/view/header.php";
 ?>
 
 <link href="css/w3.css" rel="stylesheet" type="text/css" />
@@ -14,14 +14,14 @@ include "header.php";
 	<tr style="text-align:left">
 		<th style="width:5%">Sr.</th>
 		<th style="width:80%">Input Text</th>
-		<th style="width:10%;text-align:center">Audio</th>
-		<th style="width:5%;"></th>
+		<th colspan="3" style="width:10%;text-align:center">Audio</th>
+		<!-- <th style="width:5%;"></th> -->
 	</tr>
 
 <?php 
 if(isset($_SESSION["login"])) {
 	
-	$conn = new mysqli($dbservername, $dbusername, $dbpassword, $dbname);
+	// $conn = new mysqli($dbservername, $dbusername, $dbpassword, $dbname);
 	
 	if ($conn->connect_error) {
 		die("Connection failed: " . $conn->connect_error);
@@ -49,6 +49,7 @@ if(isset($_SESSION["login"])) {
 					<td style="width:80%">'.$full.'</td>
 					
 					<td style="width:10%;text-align:center"><a href="'.$row["filename"].'" download>Download</a></td>
+					<td><audio controls="controls" <source src="'.$row["filename"].'"></audio></td>
 					<td style="width:5%;text-align:center"><a href="remove.php?id='.$row["id"].'" onclick="return confirm(\'Are you sure you want to delete\')">Delete</a></td>
 				  </tr>';			
 		}		
@@ -61,16 +62,12 @@ if(isset($_SESSION["login"])) {
 	}
 	$conn->close();
 } else {
-	header("Location: logout.php");
+	header("Location: auth/logout.php");
 }
 
 ?>
 </table>
-<br/><br/>
-Right-click the Download link.<br>Select "Save target as" or "Save link as."
-
 <div class="clr"></div>
-</div>
-<br/><br/><br/><br/><br/>
+</div><br>
 <?php 
-include "footer.php"; ?>
+include "include/view/footer.php"; ?>

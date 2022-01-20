@@ -1,6 +1,6 @@
 <?php 
-include "db.php";
-include "header.php";
+include "include/db/db.php";;
+include "include/view/header.php";
 ?>
 <div class="body_big">
 <h2>Signup</h2>
@@ -21,7 +21,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 	$repassword = $_POST["repassword"];
 
 	// Create connection
-	$conn = new mysqli($dbservername, $dbusername, $dbpassword, $dbname);
+	// $conn = new mysqli($dbservername, $dbusername, $dbpassword, $dbname);
 	// Check connection
 	if ($conn->connect_error) {
 		die("Connection failed: " . $conn->connect_error);
@@ -151,5 +151,5 @@ function validate() {
 
 <?php
 }
-include "footer.php";
+include "include/view/footer.php";
 ?>

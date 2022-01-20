@@ -1,5 +1,5 @@
 <?php 
-include "db.php";
+include "include/db/db.php";;
 session_start();
 error_reporting(E_ALL);
 ini_set('display_errors', 'On');
@@ -16,7 +16,7 @@ if(isset($_SESSION["loginid"]) && $_SERVER['REQUEST_METHOD'] == 'GET') {
 
 
 	// Create connection
-	$conn = new mysqli($dbservername, $dbusername, $dbpassword, $dbname);
+	// $conn = new mysqli($dbservername, $dbusername, $dbpassword, $dbname);
 	// Check connection
 	if ($conn->connect_error) {
 		die("Connection failed: " . $conn->connect_error);

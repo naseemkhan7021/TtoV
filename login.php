@@ -1,5 +1,5 @@
 <?php 
-include "db.php";
+include "include/db/db.php";;
 
 error_reporting(E_ALL);
 ini_set('display_errors', 'On');
@@ -9,7 +9,7 @@ $error = "";
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
 	
 	// Create connection
-	$conn = new mysqli($dbservername, $dbusername, $dbpassword, $dbname);
+	// $conn = new mysqli($dbservername, $dbusername, $dbpassword, $dbname);
 	// Check connection
 	if ($conn->connect_error) {
 		die("Connection failed: " . $conn->connect_error);
@@ -33,7 +33,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 	$conn->close();
 }
 
-include "header.php";
+include "include/view/header.php";
 
 ?>
 
@@ -103,5 +103,5 @@ include "header.php";
 	</div>
 </div>
 <?php 
-include "footer.php";
+include "include/view/footer.php";
 ?>

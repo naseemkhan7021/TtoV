@@ -1,6 +1,6 @@
 <?php 
-include "db.php";
-include "header.php";
+include "include/db/db.php";;
+include "include/view/header.php";
 ?>
 <div class="body_big">
 <h2>Forget Password</h2>
@@ -15,7 +15,7 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 
 	if (!empty($_POST["email"]) && filter_var($email, FILTER_VALIDATE_EMAIL)) {
 		// Create connection
-		$conn = new mysqli($dbservername, $dbusername, $dbpassword, $dbname);
+		// $conn = new mysqli($dbservername, $dbusername, $dbpassword, $dbname);
 		// Check connection
 		if ($conn->connect_error) {
 			die("Connection failed: " . $conn->connect_error);
@@ -113,5 +113,5 @@ else {
 	</div>
 </div>
 <?php
-include "footer.php";
+include "include/view/footer.php";
 ?>

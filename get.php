@@ -1,6 +1,6 @@
 <?php
 session_start();
-include "db.php";
+include "include/db/db.php";; # not use
 $finalAudio = "";
 $text = "";
 
