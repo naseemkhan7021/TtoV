@@ -1,7 +1,7 @@
 <?php
+// include "include/db/db.php";
 session_start();
 include "include/view/header.php";
-include "include/db/db.php";
 $audiofileName = $_SESSION['audiofileName'] ?? "not";
 $text = "";
 ?>
@@ -13,8 +13,6 @@ $text = "";
 
 
 <body>
-
-
 	<div id="player">
 		<div style="width:204px; height:24px; margin:10px;">
 
@@ -35,8 +33,6 @@ $text = "";
 	</div>
 
 	<br>
-	<br>
-	<br>
 
 
 	<div id="player"></div>
@@ -50,12 +46,12 @@ $text = "";
 
 
 
-		<input type="button" class="submitbutton-out"  name="conver" value="Convert to Speech" onclick="getAudio()" /> 
+		<input type="button" class="submitbutton-out" name="conver" value="Convert to Speech" onclick="getAudio()" />
 		<?php
 		// echo $audiofileName ?? '';
 		if (isset($_SESSION["login"]) && $_SESSION["login"] == 1) {
 		?>
-			<input type="submit" class="submitbutton" value="Save To My List" style="padding:0px" />
+			<!-- <input type="submit" class="submitbutton" value="Save To My List" style="padding:0px" /> -->
 
 		<?php
 		} else {
@@ -66,20 +62,6 @@ $text = "";
 		<?php
 		}
 		?>
-
-		<!-- </form>
-
-					<br/>
-					<br/>
-					<form action="save.php" method="post">
-						<input type="hidden" name="engText" value="<?php echo $text; ?>">
-						<input type="hidden" name="filename" value="<?php echo $audiofileName; ?>"> -->
-		<!-- <input type="image" name="imageField" id="imageField" src="images/save.gif" style="padding:0px"/> -->
-
-		<!-- </form> -->
-
-		<!-- $player="<audio controls='controls'><source src='data:audio/mpeg;base64,".base64_encode($audioStream)."'></audio>"; -->
-
 
 		<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 
